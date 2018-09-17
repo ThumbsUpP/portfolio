@@ -8,6 +8,10 @@ const Home = () => {
                 <InterpolSVG />
                 <Title>PIERRE CAYOL</Title>
                 <SubTitle>from marketer to web developer</SubTitle>
+                <IconContainer href="#roadmap">
+                    <IconStyled className="fas fa-chevron-circle-down"></IconStyled>
+                </IconContainer>
+                
                 <LineBox>
                     <Line topMin = {'-5em'} top={'-15em'}/>
                     <Line topMin = {'-2em'} top={'-9em'}/>
@@ -29,6 +33,28 @@ const Home = () => {
     }
 
 export default Home;
+
+const IconContainer = styled.a`
+align-self: center;
+position: absolute;
+bottom: 2rem;`
+
+
+const IconStyled = styled.i`
+color: #39393c;
+transform: scale(2.5);
+
+animation-duration: 2s;
+animation-name: colorSchift;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+  @keyframes colorSchift {
+    from {
+    }
+    to {
+        color: #616161;
+    }
+  }`
 
 const Line = styled.div`
 width: 100%;
